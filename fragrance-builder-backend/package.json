@@ -1,0 +1,37 @@
+{
+  "name": "fragrance-builder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "fragrance-builder-backend": "nodemon server.js",
+    "fragrance-builder-frontend": "npm start --prefix ../fragrance-builder-frontend",
+    "dev": "concurrently \"npm run fragrance-builder-backend\" \"npm start --prefix ../fragrance-builder-frontend --port 3000\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Digvorzhak/fragrance-builder-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Digvorzhak/fragrance-builder-backend/issues"
+  },
+  "homepage": "https://github.com/Digvorzhak/fragrance-builder-backend#readme",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "bcrypt": "^5.1.0",
+    "cheerio": "^1.0.0-rc.12",
+    "concurrently": "^8.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3",
+    "puppeteer": "^19.8.2",
+    "request": "^2.88.2"
+  }
+}
