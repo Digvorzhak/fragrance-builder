@@ -33,7 +33,7 @@ const createUser = asyncHandler(async (req, res) => {
   }
   res.status(404);
   const user = await User.create({
-    name,
+    name: fullName,
     email,
     password,
   });
