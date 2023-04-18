@@ -16,7 +16,7 @@ export function LoginForm(props) {
     event.preventDefault();
 
     try {
-      const response = await axios.get(`http://localhost:5000/api/v1/users?email=${email}`);
+      const response = await axios.get(`/users?email=${email}`);
       const userData = response.data.data;
       console.log(userData);
 

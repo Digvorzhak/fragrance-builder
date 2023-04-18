@@ -22,7 +22,7 @@ const Showcase = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/v1/fragrances/${fragranceID}`);
+        const response = await axios.get(`fragrances/${fragranceID}`);
         if (response.status !== 200) {
           console.log(response);
           throw new Error("Could not get fragrance.");

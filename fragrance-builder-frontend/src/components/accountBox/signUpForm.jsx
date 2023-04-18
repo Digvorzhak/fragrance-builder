@@ -26,7 +26,7 @@ export function SignUpForm(props) {
       // if (!pass)
       const updatedUserInfo = { password: password, name: fullName, email: email };
       console.log(updatedUserInfo);
-      const response = await axios.post(`http://localhost:5000/api/v1/users`, updatedUserInfo);
+      const response = await axios.post(`/users`, updatedUserInfo);
       if (response.statusText === "Created") {
         localStorage.setItem("id", JSON.stringify(response.data.data._id));
         navigate(`/collections`);
