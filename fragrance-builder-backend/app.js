@@ -9,7 +9,7 @@ connectDb();
 const app = express();
 
 app.use(cors());
-app.use("/", express.static("../client/build"));
+app.use("/", express.static("../fragrance-builder-frontend/build"));
 app.use(express.json());
 
 app.use("/api/v1/users", require("./routes/userRoutes"));
