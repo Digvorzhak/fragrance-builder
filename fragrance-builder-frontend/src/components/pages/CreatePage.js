@@ -22,7 +22,7 @@ const CreatePage = () => {
 
   async function createFragrance(name, topNotes, middleNotes, baseNotes) {
     try {
-      const response = await axios.post(`/${loggedUserID}`, {
+      const response = await axios.post(`/api/v1/fragrances/${loggedUserID}`, {
         name: name,
         topNotes: topNotes,
         middleNotes: middleNotes,

@@ -21,7 +21,7 @@ const MyCollectionsPage = () => {
 
   useEffect(() => {
     async function fetchFragrancesData() {
-      const user = await axios.get(`users/${loggedUserID}`);
+      const user = await axios.get(`/api/v1/users/${loggedUserID}`);
       const promises = user.data.data.fragrances.map((fragrance) => axios.get(`fragrances/${fragrance._id}`));
       const fragrances = await Promise.all(promises);
       console.log(fragrances);

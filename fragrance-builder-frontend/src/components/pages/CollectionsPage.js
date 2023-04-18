@@ -23,7 +23,7 @@ const CollectionsPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/fragrances");
+        const response = await axios.get("/api/v1/fragrances");
         if (!response.statusText === "OK") {
           throw new Error("Could not get collection.");
         }
